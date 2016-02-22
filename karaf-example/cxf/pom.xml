@@ -10,6 +10,7 @@
 
     <modules>
         <module>personservice</module>
+        <module>personservice-rest</module>
     </modules>
 
 </project>
