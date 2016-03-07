@@ -15,7 +15,7 @@
 		 http://www.osgi.org/xmlns/metadata/v1.0.0 http://www.osgi.org/xmlns/metatype/v1.1.0/metatype.xsd
 	 ">
 	 <OCD description="jms2rest Example" name="jms2rest" id="jms2rest">
-	 	<AD name="" id="personServiceUri" type="String" default="http://localhost:8183/cxf/person" description=""/>
+	 	<AD name="" id="personServiceUri" type="String" default="http://localhost:8181/cxf/person" description=""/>
 	 </OCD>
 	 <Designate pid="jms2rest">
 	 	<Object ocdref="jms2rest"/>

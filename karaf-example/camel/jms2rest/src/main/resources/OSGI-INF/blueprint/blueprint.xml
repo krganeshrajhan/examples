@@ -33,7 +33,7 @@
   
     <cm:property-placeholder persistent-id="net.lr.tutorial.karaf.cxf.personservice" update-strategy="reload">
         <cm:default-properties>
-            <cm:property name="personServiceUri" value="http://localhost:8183/cxf/person"/>
+            <cm:property name="personServiceUri" value="http://localhost:8181/cxf/person"/>
         </cm:default-properties>
     </cm:property-placeholder>
   

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="tasklist-ui-1.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/tasklist-ui/target/tasklist-ui-1.0.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
