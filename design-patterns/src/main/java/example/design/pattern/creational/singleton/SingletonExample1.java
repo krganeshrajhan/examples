@@ -7,10 +7,8 @@ public class SingletonExample1 {
 
     private static SingletonExample1 instance = null;
 
-    public SingletonExample1() {
-        if(instance==null) {
-            instance =  getInstance();
-        }
+    private SingletonExample1() {
+
     }
 
     public static SingletonExample1 getInstance() {
