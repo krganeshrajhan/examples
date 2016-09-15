@@ -1,5 +1,7 @@
 package example.design.pattern.creational.singleton;
 
+import example.design.pattern.creational.singleton.builder.SingletonExample1;
+
 /**
  * Created by 1532082 on 7/20/2016.
  */

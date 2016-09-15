@@ -1,4 +1,4 @@
-package example.design.pattern.creational.singleton;
+package example.design.pattern.creational.singleton.builder;
 
 /**
  * Created by 1532082 on 7/20/2016.
