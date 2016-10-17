@@ -1,5 +1,6 @@
 package example.design.pattern.behavioral.chain;
 
+import example.design.pattern.behavioral.chain.builder.LoggerBuilder;
 import example.design.pattern.behavioral.chain.logger.AbstractLogger;
 import example.design.pattern.behavioral.chain.logger.ConsoleLogger;
 import example.design.pattern.behavioral.chain.logger.ErrorLogger;
@@ -12,7 +13,7 @@ public class ChainPatternDemo {
 
     public static void main(String [] args) {
 
-        AbstractLogger loggerChain = getChainOfLoggers();
+        AbstractLogger loggerChain = LoggerBuilder.getChainOfLoggers();
 
         loggerChain.logMessage(AbstractLogger.INFO,
                 "This is an information.");
@@ -23,16 +24,5 @@ public class ChainPatternDemo {
         loggerChain.logMessage(AbstractLogger.ERROR,
                 "This is an error information.");
 
-    }
-
-    private static AbstractLogger getChainOfLoggers() {
-
-        AbstractLogger errorLogger = new ErrorLogger(AbstractLogger.ERROR);
-        AbstractLogger fileLogger = new FileLogger(AbstractLogger.DEBUG);
-        AbstractLogger consoleLogger = new ConsoleLogger(AbstractLogger.INFO);
-
-        errorLogger.setNextLogger(fileLogger);
-        fileLogger.setNextLogger(consoleLogger);
-        return errorLogger;
     }
 }
