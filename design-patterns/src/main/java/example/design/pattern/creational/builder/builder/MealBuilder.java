@@ -4,6 +4,7 @@ import example.design.pattern.creational.builder.item.ChickenBurger;
 import example.design.pattern.creational.builder.item.Coke;
 import example.design.pattern.creational.builder.item.Pepsi;
 import example.design.pattern.creational.builder.item.VegBurger;
+import example.design.pattern.creational.builder.meal.Meal;
 
 /**
  * Created by 1532082 on 7/11/2016.
