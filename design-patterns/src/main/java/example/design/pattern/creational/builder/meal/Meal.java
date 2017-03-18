@@ -1,4 +1,4 @@
-package example.design.pattern.creational.builder.builder;
+package example.design.pattern.creational.builder.meal;
 
 import example.design.pattern.creational.builder.item.Item;
 

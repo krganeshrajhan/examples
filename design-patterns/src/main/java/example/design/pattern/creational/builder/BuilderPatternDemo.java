@@ -1,6 +1,6 @@
 package example.design.pattern.creational.builder;
 
-import example.design.pattern.creational.builder.builder.Meal;
+import example.design.pattern.creational.builder.meal.Meal;
 import example.design.pattern.creational.builder.builder.MealBuilder;
 
 /**
