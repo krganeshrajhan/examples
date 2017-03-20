@@ -15,6 +15,16 @@ import javax.ws.rs.core.Response;
 public class HelloWorldService {
 
     @GET
+    @Path("/")
+    public Response getMsg() {
+
+        String output = "Hello  ";
+
+        return Response.status(200).entity(output).build();
+
+    }
+
+    @GET
     @Path("/{param}")
     public Response getMsg(@PathParam("param") String msg) {
 
