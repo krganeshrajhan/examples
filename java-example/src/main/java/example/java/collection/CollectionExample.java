@@ -41,6 +41,25 @@ public class CollectionExample {
         m1.put("Daisy", "14");
         System.out.println();
         System.out.println(" Map Elements");
-        System.out.print("\t" + m1);
+        System.out.println("\t" + m1);
+
+        // Size
+        System.out.println("ArrayList size: "+a1.size());
+        System.out.println("LinkedList size: "+l1.size());
+        System.out.println("Set size: "+s1.size());
+        System.out.println("Map size: "+m1.size());
+
+        //isEmpty
+        System.out.println("ArrayList Empty: "+a1.isEmpty());
+        System.out.println("LinkedList Empty: "+l1.isEmpty());
+        System.out.println("HashSet size: "+s1.isEmpty());
+        System.out.println("HashMap size: "+m1.isEmpty());
+
+        //  contains
+        System.out.println("ArrayList Contains: "+a1.contains("Zara"));
+        System.out.println("LinkedList Contains: "+l1.contains("Zara"));
+        System.out.println("HashSet Contains: "+s1.contains("Zara"));
+        System.out.println("HashMap Contains: "+m1.containsKey("Zara"));
+
     }
 }
