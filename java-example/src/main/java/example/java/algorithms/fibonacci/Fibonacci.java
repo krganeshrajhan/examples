@@ -1,5 +1,7 @@
 package example.java.algorithms.fibonacci;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Fibonacci {
@@ -22,5 +24,6 @@ public class Fibonacci {
 		int n = scanner.nextInt();
 		scanner.close();
 		System.out.println(fibonacci(n));
+		Map<String,?> map = new HashMap<String, Object>();
 	}
 }
