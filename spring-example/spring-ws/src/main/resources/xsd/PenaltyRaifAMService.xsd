@@ -1,0 +1,19 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="http://com/emc/drcap/penalty/model/bc/am/common/"
+    xmlns:ns0="http://xmlns.oracle.com/adf/svc/errors/" xmlns:tns="http://com/emc/drcap/penalty/model/bc/am/common/">
+    <xs:import namespace="http://xmlns.oracle.com/adf/svc/errors/" schemaLocation="classpath:ServiceExceptionXSD.xsd"/>
+    <xs:element name="approveStatus">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="sewUploadId" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="approveStatusResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="result" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

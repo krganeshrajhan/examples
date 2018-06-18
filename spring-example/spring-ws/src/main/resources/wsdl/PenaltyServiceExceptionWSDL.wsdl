@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<WL5G3N0:definitions targetNamespace="http://xmlns.oracle.com/adf/svc/errors/" xmlns="" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="http://xmlns.oracle.com/adf/svc/errors/">
+  <WL5G3N0:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="http://xmlns.oracle.com/adf/svc/errors/" xmlns:tns="http://xmlns.oracle.com/adf/svc/errors/">
+      <import namespace="http://xmlns.oracle.com/adf/svc/errors/" schemaLocation="ServiceExceptionXSD.xsd"/>
+    </schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="ServiceException">
+    <WL5G3N0:part element="WL5G3N1:ServiceErrorMessage" name="ServiceErrorMessage"/>
+  </WL5G3N0:message>
+</WL5G3N0:definitions>

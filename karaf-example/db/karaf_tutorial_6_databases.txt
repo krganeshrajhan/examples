@@ -170,7 +170,7 @@ The following snippet is the interesting part:
   </bean>
 
 This makes a lookup for the EntityManagerFactory OSGi service that is suitable for the persistence unit person and injects a thread safe EnityManager into the
-PersonServiceImpl. Additionally it wraps each call to a method of PersonServiceImpl with code that opens a transaction before the method and commits on success or rollbacks on any exception thrown.
+PersonServiceImpl. Additionally it wraps each call to a method of PersonServiceImpl with code that opens a transaction before the method and commits on success or rollbacks on any com.example.spring.remoting.exception thrown.
 Build and Install
 
 The project builds with mvn clean install like usual. A prerequisite is that the derby datasource is installed like described above. Then we have to install the bundles for hibernate, aries jpa, transaction, jndi) and of course our db-examplejpa bundle.

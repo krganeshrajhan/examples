@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<WL5G3N0:definitions name="PenaltyRaifAMService" targetNamespace="/com/emc/drcap/penalty/model/bc/am/common/" xmlns="" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="/com/emc/drcap/penalty/model/bc/am/common/types/" xmlns:WL5G3N2="/com/emc/drcap/penalty/model/bc/am/common/" xmlns:WL5G3N3="http://xmlns.oracle.com/adf/svc/errors/" xmlns:WL5G3N4="http://schemas.xmlsoap.org/wsdl/soap/">
+  <WL5G3N0:import location="PenaltyServiceExceptionWSDL.wsdl" namespace="http://xmlns.oracle.com/adf/svc/errors/"/>
+  <WL5G3N0:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="/com/emc/drcap/penalty/model/bc/am/common/types/" xmlns:WL5G3N2="/com/emc/drcap/penalty/model/bc/am/common/" xmlns:WL5G3N3="http://xmlns.oracle.com/adf/svc/errors/" xmlns:WL5G3N4="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:errors="http://xmlns.oracle.com/adf/svc/errors/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="/com/emc/drcap/penalty/model/bc/am/common/" xmlns:types="/com/emc/drcap/penalty/model/bc/am/common/types/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <import namespace="/com/emc/drcap/penalty/model/bc/am/common/types/" schemaLocation="PenaltyRaifAMService.xsd"/>
+    </schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="PenaltyRaifAMService_approveStatus">
+    <WL5G3N0:part element="WL5G3N1:approveStatus" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="PenaltyRaifAMService_approveStatusResponse">
+    <WL5G3N0:part element="WL5G3N1:approveStatusResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="PenaltyRaifAMService">
+    <WL5G3N0:documentation>
+        
+            
+            
+            
+        
+    
+    
+        
+        
+            
+            
+                
+            
+            
+                
+            
+            
+                
+            
+        
+    
+    
+        
+            
+        
+    
+</WL5G3N0:documentation>
+    <WL5G3N0:operation name="approveStatus">
+      <WL5G3N0:input message="WL5G3N2:PenaltyRaifAMService_approveStatus"/>
+      <WL5G3N0:output message="WL5G3N2:PenaltyRaifAMService_approveStatusResponse"/>
+      <WL5G3N0:fault message="WL5G3N3:ServiceException" name="ServiceException"/>
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="PenaltyRaifAMServiceSoapHttp" type="WL5G3N2:PenaltyRaifAMService">
+    <WL5G3N4:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <WL5G3N0:operation name="approveStatus">
+      <WL5G3N4:operation soapAction="/com/emc/drcap/penalty/model/bc/am/common/approveStatus"/>
+      <WL5G3N0:input>
+        <WL5G3N4:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N4:body use="literal"/>
+      </WL5G3N0:output>
+      <WL5G3N0:fault name="ServiceException">
+        <WL5G3N4:fault name="ServiceException" use="literal"/>
+      </WL5G3N0:fault>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="PenaltyRaifAMService">
+    <WL5G3N0:port binding="WL5G3N2:PenaltyRaifAMServiceSoapHttp" name="PenaltyRaifAMServiceSoapHttpPort">
+      <WL5G3N4:address location="http://DVUXAP12:5623/EMCDataService/FormUploadService/Proxy/RAIFFormUploadPS"/>
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>
