@@ -44,9 +44,9 @@ public class IsBinarySearchTree {
 		Node i2 = new Node();
 		i2.data = 2;
 		Node i3 = new Node();
-		i3.data = 3;
+		i3.data = 4;
 		Node i4 = new Node();
-		i4.data = 4;
+		i4.data = 3;
 		Node i5 = new Node();
 		i5.data = 5;
 		Node i6 = new Node();

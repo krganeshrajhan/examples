@@ -55,5 +55,13 @@ public class IteratorExample {
             System.out.print(element + " ");
         }
         System.out.println();
+
+        // List Iterator
+
+        Iterator<Integer> iterator = al.listIterator();
+        while(iterator.hasNext()) {
+
+
+        }
     }
 }
