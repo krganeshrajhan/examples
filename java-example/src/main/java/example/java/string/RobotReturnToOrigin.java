@@ -1,5 +1,8 @@
 package example.java.string;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class RobotReturnToOrigin {
 
     public boolean judgeCircle(String moves) {
@@ -32,7 +35,14 @@ public class RobotReturnToOrigin {
 
     public static void main(String[] args) {
 
-        RobotReturnToOrigin robotReturnToOrigin = new RobotReturnToOrigin();
-        System.out.println(robotReturnToOrigin.judgeCircle("LRUD"));
+//        RobotReturnToOrigin robotReturnToOrigin = new RobotReturnToOrigin();
+//        System.out.println(robotReturnToOrigin.judgeCircle("LRUD"));
+        System.out.println(Arrays.copyOfRange(new int[]{0,1},0,1).length);
+        Object o =new RobotReturnToOrigin();
+        try {
+            o.wait();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
