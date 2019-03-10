@@ -1,4 +1,4 @@
-package example.java.heap;
+package example.java.datastructure.heap;
 
 import java.util.*;
 

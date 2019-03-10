@@ -1,6 +1,4 @@
-package example.java.datastructures.trees;
-
-import java.util.Scanner;
+package example.java.datastructure.tree;
 
 public class IsBinarySearchTree {
 

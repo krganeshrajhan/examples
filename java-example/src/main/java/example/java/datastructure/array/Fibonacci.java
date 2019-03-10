@@ -1,4 +1,4 @@
-package example.java.algorithms.fibonacci;
+package example.java.datastructure.array;
 
 import java.util.HashMap;
 import java.util.Map;

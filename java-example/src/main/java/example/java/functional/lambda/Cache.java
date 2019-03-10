@@ -1,4 +1,4 @@
-package example.java.lambda;
+package example.java.functional.lambda;
 
 import java.util.Arrays;
 import java.util.Comparator;

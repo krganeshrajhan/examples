@@ -1,9 +1,4 @@
-package example.java.datastructures.stack;
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
+package example.java.datastructure.stack;
 
 public class StackDynamicArrayDemo {
 

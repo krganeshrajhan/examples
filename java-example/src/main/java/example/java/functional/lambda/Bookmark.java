@@ -1,4 +1,4 @@
-package example.java.lambda;
+package example.java.functional.lambda;
 
 public class Bookmark {
     private long id;

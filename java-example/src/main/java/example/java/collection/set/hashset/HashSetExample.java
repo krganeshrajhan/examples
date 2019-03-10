@@ -1,6 +1,8 @@
 package example.java.collection.set.hashset;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 
 /**
  * Created by 1532082 on 3/22/2017.
@@ -19,5 +21,6 @@ public class HashSetExample {
         hs.add("F");
         hs.add("F");
         System.out.println(hs);
+        List<Integer> l = new ArrayList<>(hs);
     }
 }

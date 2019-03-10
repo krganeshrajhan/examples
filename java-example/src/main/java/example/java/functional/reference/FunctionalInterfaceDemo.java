@@ -1,4 +1,4 @@
-package example.java.method.reference;
+package example.java.functional.reference;
 
 import java.util.ArrayList;
 import java.util.Arrays;
