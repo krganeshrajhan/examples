@@ -1,6 +1,4 @@
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -9,41 +7,46 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Stack;
+import java.util.function.Consumer;
+import java.util.function.Supplier;
 
-public class Solution {
+import static java.lang.System.in;
 
-	// Complete the super_reduced_string function below.
-	static String super_reduced_string(String s) {
+public abstract class Solution extends Child {
+
+//    public abstract void mn() ;
 
 
-		String oldStr = s;
-		do {
-			oldStr =s;
-			char[] chars = s.toCharArray();
-			for(int i=0; i<chars.length-1; i++) {
-				if(chars[i]==chars[i+1]) {
-					s = s.substring(0, i) + s.substring(i+2, s.length());
-					break;
-				}
-			}
-		} while (oldStr!=s);
-		return (s.isEmpty()) ? "Empty String" : s;
-	}
+    public static void main(String args[]) throws IllegalAccessException, FileNotFoundException {
+	    /*Character c = new Character("C");
+	    Float f = new Float(23.43);
+	    Double d = new Double("23,4d");
+//	    Integer i = Integer.parseUnsignedInt(2);*/
+//	    Boolean b = new Boolean("false");
 
-	private static final Scanner scanner = new Scanner(System.in);
 
-	public static void main(String[] args) throws IOException {
-//		BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
-		String s = scanner.nextLine();
+        /*Supplier<String> i = () -> "Car";
 
-		String result = super_reduced_string(s);
+        Consumer<String> c = x -> System.out.print(x.toLowerCase());
+        Consumer<String> d = x -> System.out.print(x.toUpperCase());
+        c.andThen(d).accept(i.get());
+        System.out.println();*/
 
-//		bufferedWriter.write(result);
-//		bufferedWriter.newLine();
 
-//		bufferedWriter.close();
+        try {
+        } finally {
+            System.out.println((Math.random())* 10  );
 
-		scanner.close();
-	}
+
+        }
+    }
+}
+
+
+
+abstract class Child {
+
+    abstract void mn() ;
+
 }
