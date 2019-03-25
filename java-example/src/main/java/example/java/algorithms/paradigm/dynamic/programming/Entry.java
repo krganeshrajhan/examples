@@ -2,6 +2,7 @@ package example.java.algorithms.paradigm.dynamic.programming;
 
 
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
 
 public class Entry {
@@ -39,5 +40,6 @@ public class Entry {
         HashMap<String,Object> map = new HashMap<String, Object>();
         map.put("key1",1);
          System.out.println(Entry.flattenDictionary(map));
+         LinkedList l;
     }
 }
