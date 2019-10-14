@@ -1,5 +1,7 @@
 package example.java.string;
 
+import java.util.HashSet;
+
 public class NumUniqueEmails {
     public int numUniqueEmails(String[] emails) {
         HashSet<String> formattedEmails = new HashSet<String>();
@@ -33,6 +35,6 @@ public class NumUniqueEmails {
 
     public static void main(String[] args) {
         NumUniqueEmails numUniqueEmails = new NumUniqueEmails();
-        numUniqueEmails.numUniqueEmails({"test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"});
+//        numUniqueEmails.numUniqueEmails({"test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"});
     }
 }

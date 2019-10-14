@@ -1,6 +1,6 @@
 package example.java.algorithms.searching.breadth.first;
 
-import lombok.AllArgsConstructor;
+//import lombok.AllArgsConstructor;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -43,7 +43,7 @@ public class SymmetricTree {
 
 }
 
-@AllArgsConstructor
+//@AllArgsConstructor
 class TreeNode {
     int val;
     TreeNode left;

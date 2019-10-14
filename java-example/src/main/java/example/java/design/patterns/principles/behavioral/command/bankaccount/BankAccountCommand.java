@@ -2,39 +2,30 @@ package example.java.design.patterns.principles.behavioral.command.bankaccount;
 
 public class BankAccountCommand implements Command {
 
-    private BankAccount bankAccount;
-    private Action action;
-    private double amount;
-    private boolean successful;
+    private final BankAccount bankAccount;
+    private final Action action;
+    private final int amount;
 
-    public BankAccountCommand(BankAccount bankAccount, Action action, double amount) {
+    public BankAccountCommand(BankAccount bankAccount, Action action, int amount) {
         this.bankAccount = bankAccount;
         this.action = action;
         this.amount = amount;
     }
 
+    @Override
     public void call() {
-        switch(action) {
+        switch (action) {
             case DEPOSIT:
-                successful = true;
                 bankAccount.deposit(amount);
                 break;
             case WITHDRAW:
-                successful = bankAccount.withdraw(amount);
+                bankAccount.withdraw(amount);
                 break;
         }
     }
 
+    @Override
     public void undo() {
 
-        switch (action) {
-            case DEPOSIT:
-                bankAccount.withdraw(amount);
-                break;
-            case WITHDRAW:
-                if(successful)
-                    bankAccount.deposit(amount);
-                break;
-        }
     }
 }

@@ -17,6 +17,8 @@ public class NaiveIndexer {
 
         private volatile String htmlPage;
 
+        private boolean downloaded;
+
         public long getId() {
             return id;
         }
@@ -47,48 +49,65 @@ public class NaiveIndexer {
         public void setHtmlPage(String htmlPage) {
             this.htmlPage = htmlPage;
         }
+        public void setDownloaded(boolean downloaded) {
+            this.downloaded = downloaded;
+        }
+        public boolean getDownloaded() {
+            return downloaded;
+        }
     }
 
-    private static class Downloader implements Runnable {
-        private Weblink weblink;
-        public Downloader(Weblink weblink) {
+    static class Downloader implements Runnable {
+
+        Weblink weblink;
+
+        Downloader(Weblink weblink) {
             this.weblink = weblink;
         }
+
         public void run() {
+
             try {
                 String htmlPage = HttpConnect.download(weblink.getUrl());
                 weblink.setHtmlPage(htmlPage);
+                weblink.setDownloaded(true);
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             } catch (URISyntaxException e) {
                 e.printStackTrace();
             }
         }
+
     }
 
-    private static class Indexer implements Runnable {
-        private Weblink weblink;
-        private Indexer(Weblink weblink) {
+    static class Indexer implements Runnable {
+
+        Weblink weblink;
+
+        Indexer(Weblink weblink) {
             this.weblink = weblink;
         }
-        public void run() {
-            while (true) {
-                String htmlPage = weblink.getHtmlPage();
-                if (htmlPage != null) {
-                    index(htmlPage);
 
+        public void run() {
+            while(true) {
+                if(weblink.getHtmlPage() != null) {
+                    index(weblink);
                     break;
-                } else {
-                    System.out.println(weblink.getId() + " not yet downloaded!");
+                } else if(weblink.getDownloaded()) {
+                    break;
+                    //System.out.println("Content Not yet downloaded: "+ weblink.getId());
                 }
             }
         }
-        private void index(String text) {
-            if (text != null) {
-                System.out.println("\nIndexed: " + weblink.getId() + "\n");
+
+        private void index(Weblink weblink) {
+            if (weblink.getHtmlPage() != null) {
+                System.out.println("Page Indexed: " + weblink.getId());
             }
         }
+
     }
+
 
     public void go() {
         while (queue.size() > 0) {
